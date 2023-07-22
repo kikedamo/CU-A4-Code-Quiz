@@ -32,7 +32,7 @@ function NextQuestion() {
 }
 
 function ShowQuestion() {
-	Quest.innerHTML = QuestionsAll[0].Question;
+	QuestionsAll.Question.forEach(Question=> Quest.innerHTML = QuestionsAll[CurrentQuestionIndex].Question)
 	QuestionsAll.Answers.forEach(Answer => {
 		const BtnTag = document.createElement("button");
 		BtnTag.innerHTML = answers.text;
