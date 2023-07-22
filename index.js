@@ -7,6 +7,8 @@ const Next = document.getElementById("NextBtn");
 const Quest = document.getElementById("Question");
 const BtnAll = document.getElementById("Buttons");
 const web = document.getElementById("WholeSite");
+const QuestionArea = document.getElementById("QuestionArea")
+const Btn = document.getElementsByClassName("Btn")
 
 let CurrentQuestionIndex = -1
 
@@ -34,6 +36,7 @@ function NextQuestion() {
 
 function ShowQuestion() {
 	let currentQuestion = QuestionsAll[CurrentQuestionIndex];
+	console.log("question number",CurrentQuestionIndex+1)
 	Quest.innerHTML = currentQuestion.Question;
 	currentQuestion.Answers.forEach(Answer =>{
 		const BtnTag = document.createElement("button");
@@ -53,8 +56,8 @@ function SelectAnswer() {
 }
 
 function ResetQuestion(){
-	Next.classList.add("Hide")
-	BtnAll.removeChild(BtnAll.firstChild)
+	BtnAll.removeChild(Btn)
+
 }
 
 const QuestionsAll = [
