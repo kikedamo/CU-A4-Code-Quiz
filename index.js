@@ -32,10 +32,11 @@ function NextQuestion() {
 }
 
 function ShowQuestion() {
-	QuestionsAll.Question.forEach(Question=> Quest.innerHTML = QuestionsAll[CurrentQuestionIndex].Question)
-	QuestionsAll.Answers.forEach(Answer => {
+	let currentQuestion = QuestionsAll[CurrentQuestionIndex];
+	Quest.innerHTML = currentQuestion.Question;
+	currentQuestion.Answers.forEach(Answer =>{
 		const BtnTag = document.createElement("button");
-		BtnTag.innerHTML = answers.text;
+		BtnTag.innerHTML = Answer.text;
 		BtnTag.classList.add("Btn");
 	});
 }
