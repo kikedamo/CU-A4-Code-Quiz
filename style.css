@@ -1,0 +1,68 @@
+body{
+    background-color: blueviolet;
+}
+
+.QuestionArea{
+    background-color: rgb(187, 187, 187);
+    padding: 50px;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.Question{
+    font-family:Helvetica;
+}
+
+.Buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.Btn{
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.Right{
+    background-color: rgb(34, 206, 34);
+}
+.Wrong{
+    background-color: red;
+}
+
+.Btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.ControlBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ControlBtn button{
+    border: none;
+    border-radius: 20px;
+    font-size: 50px;
+    padding: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 10px;
+    background-color: white;
+    color: black;
+}
+
+.ControlBtn button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+.Hide{
+    display: none;
+}
