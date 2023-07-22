@@ -27,6 +27,7 @@ function StartGame() {
 }
 
 function NextQuestion() {
+	ResetQuestion()
 	CurrentQuestionIndex++;
 	ShowQuestion();
 }
@@ -35,14 +36,25 @@ function ShowQuestion() {
 	let currentQuestion = QuestionsAll[CurrentQuestionIndex];
 	Quest.innerHTML = currentQuestion.Question;
 	currentQuestion.Answers.forEach(Answer =>{
-		const ActualBtn = document.getElementsByClassName("Btn")
-		ActualBtn.innerHTML = Answer.text;
+		const BtnTag = document.createElement("button");
+		BtnTag.innerHTML = Answer.text;
+		BtnTag.classList.add("Btn");
+		if (Answer.correct){
+			BtnTag.dataset.correct = Answer.correct;
+		}
+		BtnTag.addEventListener("click", SelectAnswer)
+		BtnAll.appendChild(BtnTag);
 	});
 }
 
 
 function SelectAnswer() {
 
+}
+
+function ResetQuestion(){
+	Next.classList.add("Hide")
+	BtnAll.removeChild(BtnAll.firstChild)
 }
 
 const QuestionsAll = [
