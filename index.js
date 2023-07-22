@@ -35,9 +35,8 @@ function ShowQuestion() {
 	let currentQuestion = QuestionsAll[CurrentQuestionIndex];
 	Quest.innerHTML = currentQuestion.Question;
 	currentQuestion.Answers.forEach(Answer =>{
-		const BtnTag = document.createElement("button");
-		BtnTag.innerHTML = Answer.text;
-		BtnTag.classList.add("Btn");
+		const ActualBtn = document.getElementsByClassName("Btn")
+		ActualBtn.innerHTML = Answer.text;
 	});
 }
 
@@ -47,34 +46,84 @@ function SelectAnswer() {
 }
 
 const QuestionsAll = [
-	{
-		Question: "What's 1+1?",
-		Answers: [{
-			text: "1",
-			correct: false
-		}, {
-			text: "2",
-			correct: true
-		}, {
-			text: "3",
-			correct: false
-		}, {
-			text: "4",
-			correct: false
-		}, ],
-		Question: "What's 2+2",
-		Answers: [{
-			text: "1",
-			correct: false
-		}, {
-			text: "2",
-			correct: false
-		}, {
-			text: "3",
-			correct: false
-		}, {
-			text: "4",
-			correct: true
-		}, ],
-	}
-];
+    {
+        Question: "What's 1+1?",
+        Answers: [{
+            text: "1",
+            correct: false
+        }, {
+            text: "2",
+            correct: true
+        }, {
+            text: "3",
+            correct: false
+        }, {
+            text: "4",
+            correct: false
+        }, ]
+    },
+    {
+        Question: "What's 2+2?",
+        Answers: [{
+            text: "1",
+            correct: false
+        }, {
+            text: "2",
+            correct: false
+        }, {
+            text: "3",
+            correct: false
+        }, {
+            text: "4",
+            correct: true
+        }, ],
+    },
+    {
+        Question: "What's 2-1?",
+        Answers: [{
+            text: "1",
+            correct: false
+        }, {
+            text: "2",
+            correct: false
+        }, {
+            text: "3",
+            correct: true
+        }, {
+            text: "4",
+            correct: false
+        }, ],
+    },
+    {
+        Question: "What's 2+0?",
+        Answers: [{
+            text: "1",
+            correct: false
+        }, {
+            text: "2",
+            correct: true
+        }, {
+            text: "3",
+            correct: false
+        }, {
+            text: "4",
+            correct: false
+        }, ],
+    },
+    {
+        Question: "What's 1+2?",
+        Answers: [{
+            text: "1",
+            correct: false
+        }, {
+            text: "2",
+            correct: false
+        }, {
+            text: "3",
+            correct: true
+        }, {
+            text: "4",
+            correct: false
+        }, ],
+    },
+]
