@@ -8,7 +8,7 @@ const Quest = document.getElementById("Question");
 const BtnAll = document.getElementById("Buttons");
 const web = document.getElementById("WholeSite");
 
-let CurrentQuestionIndex = 0
+let CurrentQuestionIndex = -1
 
 Start.addEventListener("click", StartGame);
 Next.addEventListener("click", NextQuestion);
@@ -46,19 +46,35 @@ function SelectAnswer() {
 
 }
 
-const QuestionsAll = [{
-	Question: "What's 1+1?",
-	Answers: [{
-		text: "1",
-		correct: false
-	}, {
-		text: "2",
-		correct: true
-	}, {
-		text: "3",
-		correct: false
-	}, {
-		text: "4",
-		correct: false
-	}, ],
-}];
+const QuestionsAll = [
+	{
+		Question: "What's 1+1?",
+		Answers: [{
+			text: "1",
+			correct: false
+		}, {
+			text: "2",
+			correct: true
+		}, {
+			text: "3",
+			correct: false
+		}, {
+			text: "4",
+			correct: false
+		}, ],
+		Question: "What's 2+2",
+		Answers: [{
+			text: "1",
+			correct: false
+		}, {
+			text: "2",
+			correct: false
+		}, {
+			text: "3",
+			correct: false
+		}, {
+			text: "4",
+			correct: true
+		}, ],
+	}
+];
