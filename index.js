@@ -8,6 +8,8 @@ const Quest = document.getElementById("Question");
 const BtnAll = document.getElementById("Buttons");
 const web = document.getElementById("WholeSite");
 
+let CurrentQuestionIndex = 0
+
 Start.addEventListener("click", StartGame);
 Next.addEventListener("click", NextQuestion);
 	// BtnOne.addEventListener("click", )
@@ -25,12 +27,19 @@ function StartGame() {
 }
 
 function NextQuestion() {
-	ShowQuestion(Question);
+	CurrentQuestionIndex++;
+	ShowQuestion();
 }
 
-function ShowQuestion(Question) {
-	Quest.innerHTML = QuestionsAll.Question;
+function ShowQuestion() {
+	Quest.innerHTML = QuestionsAll[0].Question;
+	QuestionsAll.Answers.forEach(Answer => {
+		const BtnTag = document.createElement("button");
+		BtnTag.innerHTML = answers.text;
+		BtnTag.classList.add("Btn");
+	});
 }
+
 
 function SelectAnswer() {
 
