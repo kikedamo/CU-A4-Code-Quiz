@@ -28,15 +28,25 @@ body{
 }
 
 .Right{
-    background-color: rgb(34, 206, 34);
+    background-color: rgb(34, 206, 34) !important;
 }
 .Wrong{
-    background-color: red;
+    background-color: red !important;
 }
 
 .Btn:hover{
     background-color: black;
     color: white;
+}
+
+.BtnDisabled {
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: not-allowed;
 }
 
 .ControlBtn{
@@ -64,5 +74,30 @@ body{
 
 
 .Hide{
-    display: none;
+    display: none !important;
+}
+
+.timer {
+    position: absolute;
+    padding-right: 10px;
+    top: 0;
+    right: 0;
+    font-family:Helvetica;
+}
+
+.link {
+    cursor: pointer;
+    color: rgb(255, 170, 255);
+}
+
+#scoreTable th, td, table {
+    border: 2px solid black;
+}
+
+#scoreTable{
+    background-color: White;
+    font-family:Helvetica;
+    padding: 20px;
+    border-radius: 20px;
+
 }

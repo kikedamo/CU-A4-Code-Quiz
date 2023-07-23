@@ -1,37 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./index.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="WholeSite" id="WholeSite">
-        <div class="QuestionArea" id="QuestionArea">
-            <h2 class="Question Hide" id="Question">
-                Question Here
-            </h2>
-            <div class="Buttons Hide" id="Buttons">
-                <button class="Btn" id="BtnOne">
-                    Answer 1
-                </button>
-                <button class="Btn" id="BtnTwo">
-                    Answer 2
-                </button>
-                <button class="Btn" id="BtnThree">
-                    Answer 3
-                </button>
-                <button class="Btn" id="BtnFour">
-                    Answer 4
-                </button>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="./index.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="WholeSite" id="WholeSite">
+            <p class="Hide timer" id="timer">Timer:</p>
+            <p class="link" id="viewScores">View High Scores</p>
+            <table id="scoreTable" class="Hide">
+                <thead>
+                    <th>Name</th>
+                    <th>Score</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table border="1">
+            <div class="QuestionArea" id="QuestionArea">
+                <h2 class="Question Hide" id="Question">
+                    Question Here
+                </h2>
+                <div class="Buttons Hide" id="Buttons">
+                    <button class="Btn" id="BtnOne">
+                        Answer 1
+                    </button>
+                    <button class="Btn" id="BtnTwo">
+                        Answer 2
+                    </button>
+                    <button class="Btn" id="BtnThree">
+                        Answer 3
+                    </button>
+                    <button class="Btn" id="BtnFour">
+                        Answer 4
+                    </button>
+                </div>
+                <div class="ControlBtn" id="ControlBtn">
+                    <button class="StartBtn" id="StartBtn">Start</button>
+                    <button class="NextBtn Hide" id="NextBtn">Next</button>
+                </div>
             </div>
-            <div class="ControlBtn" id="ControlBtn">
-                <button class="StartBtn" id="StartBtn">Start</button>
-                <button class="NextBtn Hide" id="NextBtn">Next</button>
+            <div class="EndGame Hide" id="EndGame">
+                <input class="nameField" id="nameField" type="text" placeholder="Enter your name..."/>
+                <button id="submit">Submit</button>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
